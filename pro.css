@@ -1,0 +1,169 @@
+:root {
+  --main-color: #4B0082;
+  --accent-color: #00d0ff;
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --light-text: #666;
+  --card-bg: #fff;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin-left: 30px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: var(--transition);
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 40px;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.hero .text {
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+.hero .text h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+.hero .text h1 span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+.hero .text p {
+  font-size: 18px;
+  color: var(--light-text);
+  margin-bottom: 20px;
+}
+.hero .btn {
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+.hero .btn:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+.hero .image img {
+  width: 350px;
+  border-radius: 10px;
+}
+
+.social-sidebar {
+  position: fixed;
+  top: 40%;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.social-sidebar a img {
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-color);
+  padding: 8px;
+  border-radius: 50%;
+  transition: transform var(--transition);
+}
+.social-sidebar a img:hover {
+  transform: scale(1.1);
+}
+
+.section {
+  padding: 80px 40px;
+  background-color: var(--bg-color);
+}
+.section:nth-child(even) {
+  background-color: #fff;
+}
+.section h2 {
+  font-size: 28px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+.section p {
+  font-size: 18px;
+  color: var(--light-text);
+}
+
+/* Skills Section */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.skill-card {
+  text-align: center;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  width: 120px;
+  transition: var(--transition);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+.skill-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.skill-card p {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+/* Projects */
+.project-img {
+  width: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
